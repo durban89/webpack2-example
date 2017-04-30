@@ -12,7 +12,7 @@ const app = new Koa();
 app.use(bodyParser());
 app.use(koaLogger());
 app.use(serve(__dirname + "/../static"));
-app.use(router.routes());
+app.use(router.routes()).use(router.allowedMethods());
 
 render(app, {
   root: path.join(__dirname, '/view'),
