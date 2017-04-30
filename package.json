@@ -44,6 +44,6 @@
     "koa-static": "^3.0.0",
     "koa-views": "^6.0.2"
   },
-  "description": "webpack2",
+  "description": "webpack2 react router redux",
   "engines": "7.9.0"
 }
