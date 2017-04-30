@@ -45,5 +45,19 @@
     "koa-views": "^6.0.2"
   },
   "description": "webpack2 react router redux",
-  "engines": "7.9.0"
+  "engines": "7.9.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangda89/webpack2-example.git"
+  },
+  "keywords": [
+    "webpack2",
+    "react",
+    "router",
+    "redux"
+  ],
+  "bugs": {
+    "url": "https://github.com/zhangda89/webpack2-example/issues"
+  },
+  "homepage": "https://github.com/zhangda89/webpack2-example#readme"
 }
