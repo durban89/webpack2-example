@@ -12,7 +12,7 @@ module.exports = {
     path: __dirname + '/static/js/build',
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
-    publicPath: '/build/',
+    publicPath: '/js/build/',
     sourceMapFilename: "[name].js.map",
   },
   module: {
