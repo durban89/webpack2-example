@@ -7,7 +7,7 @@ const path = require('path');
 module.exports = {
   devtool: process.env.NODE_ENV == 'production' ? 'source-map' : 'eval',
   entry: {
-    app: __dirname + '/src/app.js',
+    app: __dirname + '/src/app.jsx',
   },
   output: {
     path: __dirname + '/build',
