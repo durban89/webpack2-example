@@ -1,11 +1,11 @@
 import {
-  INFO
+  INFO,
 } from '../constants/Home';
 
 export default function info(state = {
   data: null,
   isWaiting: false,
-  status: 'finish'
+  status: 'finish',
 }, action = {}) {
   switch (action.type) {
     case INFO:

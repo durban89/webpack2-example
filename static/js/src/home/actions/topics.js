@@ -1,24 +1,24 @@
 import {
-  TOPICS_INFO
+  TOPICS_INFO,
 } from '../constants/Topics';
 
 function doTopics(data) {
   return {
     type: TOPICS_INFO,
-    data: data
-  }
+    data,
+  };
 }
 
-export function fetchTopics() {
+export default function fetchTopics() {
   return (dispatch, getState) => {
     dispatch(doTopics({
       item: [{
-        title: 'one'
+        title: 'one',
       }, {
-        title: 'two'
+        title: 'two',
       }, {
-        title: 'three'
-      }]
+        title: 'three',
+      }],
     }));
-  }
+  };
 }

@@ -1,20 +1,20 @@
 import {
-  INFO
+  INFO,
 } from '../constants/Home';
 
 function doInfo(data) {
   return {
     type: INFO,
-    data: data
-  }
+    data,
+  };
 }
 
-export function fetchInfo() {
+export default function fetchInfo() {
   return (dispatch, getState) => {
     dispatch(doInfo({
       item: [
-        'one', 'two', 'three'
-      ]
+        'one', 'two', 'three',
+      ],
     }));
-  }
+  };
 }

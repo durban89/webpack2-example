@@ -1,11 +1,11 @@
 import {
-  TOPICS_INFO
+  TOPICS_INFO,
 } from '../constants/Topics';
 
 export default function topics(state = {
   data: null,
   isWaiting: false,
-  status: 'finish'
+  status: 'finish',
 }, action = {}) {
   switch (action.type) {
     case TOPICS_INFO:

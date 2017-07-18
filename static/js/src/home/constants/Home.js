@@ -1,3 +1,5 @@
-'use strict';
+const INFO = 'INFO';
 
-export const INFO = 'INFO';
+export default {
+  INFO,
+};

@@ -1,12 +1,11 @@
 'use strict';
 
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const webpack = require('webpack');
+const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
   entry: {
-    app: __dirname + '/static/js/src/app.js',
+    app: __dirname + '/static/js/src/app.jsx',
   },
   output: {
     path: __dirname + '/static/js/build',
@@ -17,6 +16,11 @@ module.exports = {
   },
   module: {
     rules: [{
+      enforce: "pre",
+      test: /\.js$|\.jsx$/,
+      exclude: /node_modules/,
+      loader: "eslint-loader",
+    }, {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       use: [{
@@ -35,6 +39,17 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      test: /\.js$|\.jsx$/,
+      options: {
+        eslint: {
+          configFile: './.eslintrc',
+          cache: false,
+        }
+      },
+    }),
+  ],
 }
 
 // module.exports = {

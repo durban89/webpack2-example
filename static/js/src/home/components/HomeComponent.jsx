@@ -1,12 +1,14 @@
+/* eslint import/no-extraneous-dependencies:[0] */
 import React from 'react';
-import {
-  fetchInfo
-} from '../actions/home';
 import { Link } from 'react-router-dom';
+import {
+  fetchInfo,
+} from '../actions/home';
 
 class HomeComponent extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   componentDidMount() {
@@ -18,10 +20,14 @@ class HomeComponent extends React.Component {
     return (
       <div>
         <p>HomeComponent</p>
-        <Link to='/topics'>Topics</Link>
+        <Link to="/topics">Topics</Link>
       </div>
-    )
+    );
   }
 }
+
+HomeComponent.propTypes = {
+  dispatch: React.PropTypes.func.isRequired,
+};
 
 export default HomeComponent;
