@@ -1,5 +1,6 @@
 /* eslint import/no-extraneous-dependencies:[0] */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
   fetchTopics,
@@ -27,7 +28,7 @@ class TopicsComponent extends React.Component {
 }
 
 TopicsComponent.propTypes = {
-  dispatch: React.PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default TopicsComponent;

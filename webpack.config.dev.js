@@ -1,25 +1,23 @@
-'use strict';
-
 const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
   entry: {
-    app: __dirname + '/static/js/src/app.jsx',
+    app: `${__dirname}/static/js/src/app.jsx`,
   },
   output: {
-    path: __dirname + '/static/js/build',
+    path: `${__dirname}/static/js/build`,
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
     publicPath: '/js/build/',
-    sourceMapFilename: "[name].js.map",
+    sourceMapFilename: '[name].js.map',
   },
   module: {
     rules: [{
-      enforce: "pre",
+      enforce: 'pre',
       test: /\.js$|\.jsx$/,
       exclude: /node_modules/,
-      loader: "eslint-loader",
+      loader: 'eslint-loader',
     }, {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
@@ -29,12 +27,12 @@ module.exports = {
           presets: [
             ['es2015', { modules: false }],
             'react',
-            'stage-0'
+            'stage-0',
           ],
-          plugins: ['syntax-dynamic-import']
-        }
+          plugins: ['syntax-dynamic-import'],
+        },
       }],
-    }, ]
+    }],
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -46,11 +44,11 @@ module.exports = {
         eslint: {
           configFile: './.eslintrc',
           cache: false,
-        }
+        },
       },
     }),
   ],
-}
+};
 
 // module.exports = {
 //   devtool: 'eval',

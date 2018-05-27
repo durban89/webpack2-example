@@ -1,5 +1,6 @@
 /* eslint import/no-extraneous-dependencies:[0] */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -8,7 +9,12 @@ class AppComponent extends React.Component {
   }
 
   render() {
-    return <div>asdasd</div>;
+    return (
+      <div>
+        <nav>Nav</nav>
+        <Link to="/home" >Home</Link>
+      </div>
+    );
   }
 }
 
